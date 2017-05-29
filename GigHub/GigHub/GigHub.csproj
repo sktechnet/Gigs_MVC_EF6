@@ -226,6 +226,10 @@
     <Compile Include="Migrations\201705290907004_CreateSeedDataGenres.Designer.cs">
       <DependentUpon>201705290907004_CreateSeedDataGenres.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705291026580_addedArtistIdAndGenreId.cs" />
+    <Compile Include="Migrations\201705291026580_addedArtistIdAndGenreId.Designer.cs">
+      <DependentUpon>201705291026580_addedArtistIdAndGenreId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -328,6 +332,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705290907004_CreateSeedDataGenres.resx">
       <DependentUpon>201705290907004_CreateSeedDataGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705291026580_addedArtistIdAndGenreId.resx">
+      <DependentUpon>201705291026580_addedArtistIdAndGenreId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
