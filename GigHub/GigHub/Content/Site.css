@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -21,4 +22,67 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+
+/*Override Bootstrap*/
+
+.navbar-inverse {
+    background-color: #ff4342;
+    border-color: #ff4342;
+}
+
+
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #ffffff;
+}
+
+.navbar-nav > li > a {
+    color: #fff;
+}
+
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Fjalla One", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control:focus {
+    border-color: rgba(197, 223, 249, 0.99);
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #ffffff;
+    background-color: rgba(205, 40, 39, 0.55);
+}
+
+.dropdown-menu {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.navbar-inverse .navbar-nav > .dropdown > a .caret {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+}
+
+.navbar-brand {
+    float: left;
+    padding: 15px 15px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: bold;
 }
