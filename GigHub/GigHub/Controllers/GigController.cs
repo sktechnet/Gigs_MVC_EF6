@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -12,10 +13,12 @@ namespace GigHub.Controllers
     public class GigController : Controller
     {
         private ApplicationDbContext _dbContext;
+        private DbSet<Genre> _genres;
 
         public GigController()
         {
             _dbContext = new ApplicationDbContext();
+            _genres = _dbContext.Genres;
         }
 
         // GET: Gig
@@ -24,7 +27,7 @@ namespace GigHub.Controllers
         {
             var viewModel = new GigViewModel
             {
-                Genres = _dbContext.Genres
+                Genres = _genres
             };
 
             return View(viewModel);
@@ -32,12 +35,19 @@ namespace GigHub.Controllers
 
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(GigViewModel viewModel)
         {
+            if (!ModelState.IsValid)
+            {
+                viewModel.Genres = _genres;
+                return View("Create", viewModel);
+            }
+
             var gig = new Gig
             {
                 ArtistId = User.Identity.GetUserId(),
-                DateTime = viewModel.DateTime,
+                DateTime = viewModel.GetDateTime(),
                 Venue = viewModel.Venue,
                 GenreId = viewModel.Genre
             };
