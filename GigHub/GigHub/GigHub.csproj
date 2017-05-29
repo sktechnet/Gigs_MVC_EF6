@@ -230,18 +230,30 @@
     <Compile Include="Migrations\201705291026580_addedArtistIdAndGenreId.Designer.cs">
       <DependentUpon>201705291026580_addedArtistIdAndGenreId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705291628402_addedArtistName.cs" />
+    <Compile Include="Migrations\201705291628402_addedArtistName.Designer.cs">
+      <DependentUpon>201705291628402_addedArtistName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\ForgotPasswordViewModel.cs" />
+    <Compile Include="Models\ForgotViewModel.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Gig.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models\LoginViewModel.cs" />
+    <Compile Include="ViewModels\ExternalLoginConfirmationViewModel.cs" />
+    <Compile Include="ViewModels\ExternalLoginListViewModel.cs" />
     <Compile Include="ViewModels\GigViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="CustomAttributes\ValidateDateAttribute.cs" />
     <Compile Include="CustomAttributes\ValidateTimeAttribute.cs" />
+    <Compile Include="ViewModels\RegisterViewModel.cs" />
+    <Compile Include="ViewModels\ResetPasswordViewModel.cs" />
+    <Compile Include="ViewModels\SendCodeViewModel.cs" />
+    <Compile Include="ViewModels\VerifyCodeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -337,6 +349,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705291026580_addedArtistIdAndGenreId.resx">
       <DependentUpon>201705291026580_addedArtistIdAndGenreId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705291628402_addedArtistName.resx">
+      <DependentUpon>201705291628402_addedArtistName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
