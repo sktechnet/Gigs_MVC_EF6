@@ -86,3 +86,8 @@ label {
     line-height: 20px;
     font-weight: bold;
 }
+
+span.field-validation-error {
+    color: red;
+    font-weight: bold;
+}
