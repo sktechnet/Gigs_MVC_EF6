@@ -87,6 +87,14 @@ label {
     font-weight: bold;
 }
 
+.voffset { margin-top: 2px;}
+.voffset1 { margin-top: 5px;}
+.voffset2 { margin-top: 10px;}
+.voffset3 { margin-top: 20px;}
+.voffset4 { margin-top: 40px;}
+.voffset5 { margin-top: 80px;}
+
+
 span.field-validation-error {
     color: red;
     font-weight: bold;
@@ -128,7 +136,8 @@ span.field-validation-error {
 .gigs > li .details {
     position: absolute;
     top: 0;
-    left: 70px
+    left: 70px;
+    width: 150px;
 }
 
 .gigs > li .details .artist {
@@ -140,4 +149,20 @@ span.field-validation-error {
 .gigs > li .details .genre {
     font-size: 15px;
     
+}
+
+.btn {
+    display: inline-block;
+    -ms-border-radius: 9px;
+    border-radius: 9px;
+    
+    /*
+    margin-bottom: 0;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;*/
 }

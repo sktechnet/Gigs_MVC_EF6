@@ -34,6 +34,29 @@ namespace GigHub.Controllers
         }
 
         [Authorize]
+        public ActionResult Attending()
+        {
+            var userId = User.Identity.GetUserId();
+            var gigs =
+                _dbContext.Attendances
+                    .Where(x => x.AttendeeId == userId && x.IsAttending == true)
+                    .Select(x => x.Gig)
+                    .Include(x=>x.Artist)
+                    .Include(x=>x.Genre)
+                    .ToList();
+
+            var viewModel = new HomeViewModel
+            {
+                Gigs = gigs,
+                ShowActions = User.Identity.IsAuthenticated,
+                Heading = "Gigs I'm Attending"
+            };
+
+            return View(viewModel);
+        }
+
+
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(GigViewModel viewModel)

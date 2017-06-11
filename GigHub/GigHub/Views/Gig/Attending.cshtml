@@ -1,7 +1,7 @@
 ﻿@model GigHub.ViewModels.HomeViewModel
 
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Attending";
 }
 
 <h1>@Model.Heading</h1>
@@ -19,19 +19,19 @@
             </div>
             <div class="details">
                 <span class="artist">
-                    @gig.Artist.Name 
+                    @gig.Artist.Name
                     @if (Model.ShowActions)
                     {
-                        <button class="btn btn-link btn-sm pul-right js-toggle-follow" data-user-id="@gig.ArtistId" >Follow</button>
+                        <button class="btn btn-link btn-sm pul-right js-toggle-follow" data-user-id="@gig.ArtistId">Follow</button>
                     }
                 </span>
                 <span class="genre">
                     @gig.Genre.Name
                 </span>
-                    @if (Model.ShowActions)
-                    {
-                        <button data-gig-id="@gig.Id" class="btn btn-default btn-sm pull-right js-toggle-attendance"> Going?</button>
-                    }
+                @if (Model.ShowActions)
+                {
+                    <button data-gig-id="@gig.Id" class="btn btn-default btn-sm pull-right js-toggle-attendance"> Going?</button>
+                }
             </div>
         </li>
     }
@@ -68,3 +68,5 @@
 
     </script>
 }
+
+
